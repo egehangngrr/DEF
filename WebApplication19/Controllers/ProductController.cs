@@ -10,6 +10,18 @@ namespace WebApplication19.Controllers
 {
     public class ProductController : ApiController
     {
+
+        public IHttpActionResult TEST(Product data)
+        {
+           //AYKUTTA BURADA!!!!
+            if (ModelState.IsValid)
+            {
+                return Ok(data);
+            }
+            return BadRequest(ModelState);
+        }
+
+
         public IHttpActionResult PostProduct(Product data)
         {
             //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
